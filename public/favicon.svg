@@ -1,0 +1,12 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#6A1B9A"/>
+  <!-- Graphic Mark -->
+  <g transform="translate(4, 8)">
+    <!-- Top shape -->
+    <path d="M0 2L4 0L8 2L4 4Z" fill="white"/>
+    <!-- Middle shape -->
+    <path d="M1 6L7 6L7 8L1 8Z" fill="white"/>
+    <!-- Bottom shape -->
+    <path d="M0 10L4 12L8 10L4 8Z" fill="white"/>
+  </g>
+</svg>

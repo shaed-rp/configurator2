@@ -169,17 +169,27 @@ export function PricingSummary() {
 
         {/* Action Buttons */}
         <div className="space-y-2 pt-4">
-          <Button onClick={handleGenerateQuote} className="w-full">
+          <Button 
+            onClick={handleGenerateQuote} 
+            className="w-full bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20 transition-all duration-200 rounded-md"
+          >
             <FileText className="h-4 w-4 mr-2" />
             Generate Quote
           </Button>
           
           <div className="flex gap-2">
-            <Button variant="outline" onClick={handleShare} className="flex-1">
+            <Button 
+              variant="outline" 
+              onClick={handleShare} 
+              className="flex-1 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+            >
               <Share className="h-4 w-4 mr-2" />
               Share
             </Button>
-            <Button variant="outline" className="flex-1">
+            <Button 
+              variant="outline" 
+              className="flex-1 border-primary text-primary hover:bg-primary hover:text-white transition-colors"
+            >
               <Download className="h-4 w-4 mr-2" />
               Export
             </Button>

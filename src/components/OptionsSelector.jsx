@@ -91,7 +91,7 @@ export function OptionsSelector() {
               <AccordionItem key={categoryName} value={categoryName}>
                 <AccordionTrigger className="text-left">
                   <div className="flex items-center justify-between w-full mr-4">
-                    <span className="font-semibold">{categoryName}</span>
+                    <span className="font-semibold" style={{ fontFamily: 'Montserrat, sans-serif' }}>{categoryName}</span>
                     <Badge variant="secondary" className="text-xs">
                       {compatibleOptions.length} available
                     </Badge>

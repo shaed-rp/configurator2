@@ -1,0 +1,18 @@
+<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Graphic Mark -->
+  <g transform="translate(0, 8)">
+    <!-- Top shape -->
+    <path d="M0 4L8 0L16 4L8 8Z" fill="#6A1B9A"/>
+    <!-- Middle shape -->
+    <path d="M2 12L14 12L14 16L2 16Z" fill="#6A1B9A"/>
+    <!-- Bottom shape -->
+    <path d="M0 20L8 24L16 20L8 16Z" fill="#6A1B9A"/>
+  </g>
+  
+  <!-- ENDERA Text -->
+  <g transform="translate(24, 0)">
+    <text x="0" y="28" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="#6A1B9A" letter-spacing="0.5">
+      ENDERA
+    </text>
+  </g>
+</svg>

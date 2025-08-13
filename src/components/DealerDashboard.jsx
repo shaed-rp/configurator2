@@ -220,11 +220,11 @@ export function DealerDashboard() {
         <CardContent>
           <div className="space-y-3">
             {selectedOptions.length < 3 && (
-              <div className="flex items-start gap-3 p-3 bg-blue-50 rounded-lg">
-                <Package className="h-5 w-5 text-blue-600 mt-0.5" />
+              <div className="flex items-start gap-3 p-3 bg-primary/10 rounded-lg border border-primary/20">
+                <Package className="h-5 w-5 text-primary mt-0.5" />
                 <div>
-                  <div className="font-medium text-blue-900">Add More Options</div>
-                  <div className="text-sm text-blue-700">
+                  <div className="font-medium text-primary" style={{ fontFamily: 'Montserrat, sans-serif' }}>Add More Options</div>
+                  <div className="text-sm text-muted-foreground">
                     Consider suggesting popular options like Limited Slip Axle or Spare Tire Package to increase profitability.
                   </div>
                 </div>
@@ -232,10 +232,10 @@ export function DealerDashboard() {
             )}
 
             {marginPercentage < 10 && (
-              <div className="flex items-start gap-3 p-3 bg-yellow-50 rounded-lg">
+              <div className="flex items-start gap-3 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
                 <TrendingUp className="h-5 w-5 text-yellow-600 mt-0.5" />
                 <div>
-                  <div className="font-medium text-yellow-900">Low Margin Alert</div>
+                  <div className="font-medium text-yellow-900" style={{ fontFamily: 'Montserrat, sans-serif' }}>Low Margin Alert</div>
                   <div className="text-sm text-yellow-700">
                     This configuration has below-average margin. Consider highlighting value-added options.
                   </div>
@@ -243,10 +243,10 @@ export function DealerDashboard() {
               </div>
             )}
 
-            <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg">
+            <div className="flex items-start gap-3 p-3 bg-green-50 rounded-lg border border-green-200">
               <DollarSign className="h-5 w-5 text-green-600 mt-0.5" />
               <div>
-                <div className="font-medium text-green-900">Financing Opportunity</div>
+                <div className="font-medium text-green-900" style={{ fontFamily: 'Montserrat, sans-serif' }}>Financing Opportunity</div>
                 <div className="text-sm text-green-700">
                   Total configuration of {formatCurrency(pricing.suggestedRetail)} qualifies for commercial financing programs.
                 </div>

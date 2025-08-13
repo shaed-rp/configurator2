@@ -56,7 +56,7 @@ export function VehicleSelector() {
       <CardContent className="space-y-6">
         {Object.entries(vehiclesByCategory).map(([category, vehicles]) => (
           <div key={category} className="space-y-3">
-            <h3 className="text-lg font-semibold text-primary">{category}</h3>
+            <h3 className="text-lg font-semibold text-primary" style={{ fontFamily: 'Montserrat, sans-serif' }}>{category}</h3>
             <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-3">
               {vehicles.map((vehicle) => {
                 const pricing = vehicle.base_vehicle_pricing?.[0]
@@ -107,7 +107,11 @@ export function VehicleSelector() {
                         
                         <Button 
                           size="sm" 
-                          className="w-full"
+                          className={`w-full transition-all duration-200 ${
+                            isSelected 
+                              ? 'bg-primary hover:bg-primary/90 text-white shadow-lg shadow-primary/20' 
+                              : 'border-primary text-primary hover:bg-primary hover:text-white'
+                          }`}
                           variant={isSelected ? "default" : "outline"}
                         >
                           {isSelected ? 'Selected' : 'Select'}

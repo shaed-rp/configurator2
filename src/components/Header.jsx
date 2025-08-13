@@ -27,13 +27,17 @@ export function Header() {
         <div className="flex items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 bg-primary rounded-lg flex items-center justify-center">
-                <Truck className="h-5 w-5 text-primary-foreground" />
-              </div>
+            <div className="flex items-center gap-3">
+              <img 
+                src="/brand/endera-logo.svg" 
+                alt="Endera" 
+                className="h-8 w-auto"
+                style={{ minWidth: '120px' }}
+              />
+              <Separator orientation="vertical" className="h-8" />
               <div>
-                <h1 className="text-xl font-bold">Ford E-Series Configurator</h1>
-                <p className="text-sm text-muted-foreground">Powered by Endera</p>
+                <h1 className="text-xl font-bold" style={{ fontFamily: 'Montserrat, sans-serif' }}>Ford E-Series Configurator</h1>
+                <p className="text-sm text-muted-foreground">Vehicle Configuration Platform</p>
               </div>
             </div>
             
@@ -86,6 +90,7 @@ export function Header() {
                 size="sm"
                 onClick={handleClearConfiguration}
                 disabled={!selectedVehicle && selectedOptions.length === 0}
+                className="border-primary text-primary hover:bg-primary hover:text-white transition-colors"
               >
                 <RotateCcw className="h-4 w-4 mr-2" />
                 Reset
