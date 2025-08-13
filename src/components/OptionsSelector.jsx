@@ -35,7 +35,17 @@ export function OptionsSelector() {
             Select a vehicle first to see available options
           </CardDescription>
         </CardHeader>
-        <CardContent>
+        <CardContent className="space-y-4">
+        {/* Search Bar */}
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            placeholder="Search options by name, description, or code..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-10"
+          />
+        </div>
           <div className="text-center py-8 text-muted-foreground">
             <Package className="h-12 w-12 mx-auto mb-4 opacity-50" />
             <p>Please select a base vehicle to configure options</p>
@@ -80,7 +90,17 @@ export function OptionsSelector() {
           Customize your {selectedVehicle.series_code} with available options
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="space-y-4">
+        {/* Search Bar */}
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          <Input
+            placeholder="Search options by name, description, or code..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="pl-10"
+          />
+        </div>
         <Accordion type="multiple" className="w-full">
           {Object.entries(optionsByCategory).map(([categoryName, options]) => {
             const compatibleOptions = getCompatibleOptions(options)
@@ -99,7 +119,7 @@ export function OptionsSelector() {
                 </AccordionTrigger>
                 <AccordionContent>
                   <div className="space-y-3">
-                    {compatibleOptions.map((option) => {
+                    {filteredOptions.map((option) => {
                       const pricing = option.vehicle_option_pricing?.[0]
                       const isSelected = isOptionSelected(option)
                       const isNoCharge = pricing?.is_no_charge
