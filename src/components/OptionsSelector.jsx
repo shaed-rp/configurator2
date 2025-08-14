@@ -130,7 +130,7 @@ export function OptionsSelector() {
                       <p className="text-sm">No options match your search</p>
                     </div>
                   ) : (
-                    <div className="space-y-3">
+                    <div className="space-y-2">
                       {filteredOptions.map((option) => {
                         const pricing = option.vehicle_option_pricing?.[0]
                         const isSelected = isOptionSelected(option)
@@ -145,7 +145,7 @@ export function OptionsSelector() {
                             }`}
                             onClick={() => handleOptionToggle(option)}
                           >
-                            <CardContent className="p-4">
+                            <CardContent className="p-3">
                               <div className="flex items-start gap-3">
                                 <Checkbox 
                                   checked={isSelected}
@@ -153,14 +153,14 @@ export function OptionsSelector() {
                                   className="mt-1"
                                 />
                                 
-                                <div className="flex-1 space-y-2">
+                                <div className="flex-1 space-y-1">
                                   <div className="flex items-start justify-between gap-2">
                                     <div>
-                                      <h4 className="font-medium text-sm leading-tight">
+                                      <h4 className="font-medium text-xs leading-tight">
                                         {option.option_name}
                                       </h4>
                                       {option.option_description && (
-                                        <p className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                                        <p className="text-xs text-muted-foreground mt-0.5 line-clamp-2">
                                           {option.option_description}
                                         </p>
                                       )}
@@ -172,18 +172,18 @@ export function OptionsSelector() {
                                           No Charge
                                         </Badge>
                                       ) : isCredit ? (
-                                        <div className="text-sm font-semibold text-green-600">
+                                        <div className="text-xs font-semibold text-green-600">
                                           -{formatCurrency(Math.abs(pricing.suggested_retail_price))}
                                         </div>
                                       ) : (
-                                        <div className="text-sm font-semibold text-primary">
+                                        <div className="text-xs font-semibold text-primary">
                                           {formatCurrency(pricing?.suggested_retail_price || 0)}
                                         </div>
                                       )}
                                     </div>
                                   </div>
                                   
-                                  <div className="flex flex-wrap gap-1">
+                                  <div className="flex flex-wrap gap-1 mt-1">
                                     <Badge variant="outline" className="text-xs">
                                       {option.option_code}
                                     </Badge>
